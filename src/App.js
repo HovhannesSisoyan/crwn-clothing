@@ -4,14 +4,16 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import './App.css';
+
 import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shoppage/shopPage';
 import Header from './components/header/header';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up'
+import CheckoutPage from './pages/checkout/checkout';
+
 import { auth, createUserProfileDocument } from './firebase/firebase.util';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
-import CheckoutPage from './pages/checkout/checkout';
 
 class  App extends React.Component {
   
