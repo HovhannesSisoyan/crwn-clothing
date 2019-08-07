@@ -1,4 +1,4 @@
-.checkoutItem {
+.checkout-item {
     width: 100%;
     display: flex;
     min-height: 100px;
@@ -7,7 +7,7 @@
     font-size: 20px;
     align-items: center;
   
-    .imageContainer {
+    .image-container {
       width: 23%;
       padding-right: 15px;
   
@@ -38,7 +38,7 @@
       padding-left: 20px;
     }
   
-    .removeButton {
+    .remove-button {
       padding-left: 12px;
       cursor: pointer;
     }

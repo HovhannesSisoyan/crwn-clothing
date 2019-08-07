@@ -2,14 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import MenuItem from '../menu-item/menu-item';
-
-import classes from './directory.module.scss'
-
+import './directory.scss'
 import { selectDirectorySections } from '../../redux/directory/directory.selectors';
 import { createStructuredSelector } from 'reselect';
 
 const Directory = ({ sections }) => (
-            <div className={classes.directoryMenu}>
+            <div className='directory-menu'>
                 {sections.map(section => (
                     <MenuItem
                         title={section.title}
