@@ -3,21 +3,23 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
 
-import './cart-dropdown.scss';
+import classes from'./cart-dropdown.module.scss';
+
 import CustomButton from '../custom-button/custom-button';
 import CartItem from '../cart-item/cart-item';
+
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 
 const CartDropdown = ({ cartItems, history, dispatch }) => (
-    <div className='cart-dropdown'>
-        <div className='cart-items'>
+    <div className={classes.cartDropdown}>
+        <div className={classes.cartItems}>
         {
             cartItems.length ? 
             cartItems.map(cartItem => (
                 <CartItem key={cartItem.id} item={cartItem} />
             )) : (
-            <span className='empty-message'>Your card is empty</span>
+            <span className={classes.emptyMessage}>Your card is empty</span>
             )
         }
         </div>
